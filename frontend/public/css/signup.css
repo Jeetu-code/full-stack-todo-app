@@ -1,24 +1,25 @@
 *{
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
 
 .container{
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+min-height:100vh;
+padding:1rem;
 }
 .innercontainer{
 display: flex;
   flex-direction: column;
   height: auto;
-  width: 23rem;
+  width: 100%;
+  max-width:23rem;
   box-shadow: 0 0 3px 0 gray;
   padding: 2rem 3rem;
   border-radius: 13px;
-min-width:407px;
-max-width:1200px;
 
 }
 
@@ -30,7 +31,8 @@ align-items:center;
 
 #head p{
 font-weight:bold;
-width:20rem;
+width:100%;
+max-width:20rem;
 font-size:xx-large;
 text-align:center;
 line-height:1.1;

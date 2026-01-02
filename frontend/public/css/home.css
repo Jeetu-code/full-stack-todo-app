@@ -1,23 +1,43 @@
 *{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+img{
+max-width:100%;
+height:auto;
 }
 
 body{
 background-color:#fafafa;
-max-width:1200px;
-min-width:1200px;
-margin:auto;
 }
 
 nav{
 display: flex;
 background-color:white;
-  justify-content: space-between;
+//flex-wrap:wrap;
   box-shadow: 0 0px 2px 0px gray;
-  height: 4rem;
+  height: auto;
   align-items: center;
-  padding: 0 12px 0 12px;
+  padding: 0.75rem 1rem;
+}
+
+#leftnav,#rightnav{
+width:100%;
+justify-content:space-between;
+}
+
+/*desktop*/
+@media(min-width:768px){
+nav{
+flex-wrap:nowrap;
+height:4rem;
+justify-content:space-between;
+}
+#leftnav,#rightnav{
+width:auto;
+}
 }
 
 #leftnav{
@@ -45,6 +65,7 @@ color:black;
 #rightnav{
 display:flex;
 align-items:center;
+justify-content:end;
 }
 
 #signin{
@@ -76,11 +97,12 @@ background-color:white;
 margin:2px 0 0 0;
 }
 
-/* hero section*/
+/* hero section  mobile first*/
 #hero{
 display:flex;
-justify-content:space-around;
-padding:4rem 5rem;
+flex-direction:column;
+gap:2rem;
+padding:2rem 1rem;
 }
 
 #lefthero{
@@ -89,13 +111,13 @@ display: flex;
   justify-content: center;}
 
 #bigtexthero{
-font-size: 75px;
+font-size: clamp(2rem,8vw,4.5rem);
   font-weight: bolder;
   line-height: 1;
-  width:33rem;
+  width:100%;
 }
 #smalltexthero{
-width: 26rem;
+width: 100%;
 margin: 1rem 0 0 0;
 }
 #buttonhero{
@@ -137,11 +159,25 @@ background-color: #00fbff;
 }
 #bgimghero{
 background-image: url("../assets/hero.png");
-  height: 20rem;
-  width: 31rem;
+  height: 18rem;
+  width: 100%;
+  aspect-ratio:16/10;
+  background-size:contain;
+  background-position:center;
   background-repeat: no-repeat;
   border-radius: 17px;
 }
+
+/*desktop responsive*/
+@media(min-width:768px){
+#hero{
+flex-direction:row;
+text-align:left;
+padding:4rem 5rem;
+}
+
+}
+
 
 /* section 2 */
 
@@ -157,9 +193,12 @@ margin:5rem 0 0px 0;
   font-weight: bolder;
   font-size: xxx-large;
 }
+/*mobile first */
 #infocards{
-display:flex;
-margin:3rem 0 4rem 0;
+display:grid;
+grid-template-columns:1fr;
+/*margin:3rem 0 4rem 0;*/
+gap:1.5rem;
 }
 .card span{
 margin:0 0 10px 0;
@@ -171,12 +210,20 @@ display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: white;
-  margin: 1rem 3rem;
+  margin: 0;
   padding: 1rem;
 text-align: center;
   box-shadow: 0 0px 2px 0px gray;
   border-radius:8px;
   }
+
+/*desktop */
+@media(min-width:768px){
+#infocards{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
 
 /* section 3 */
 #usertest{
@@ -194,7 +241,8 @@ font-size:xxx-large;
 }
 
 .testcard{
-width:30rem;
+width:100%;
+max-width:30;
 border-radius:1rem;
 box-shadow:0 0 1px 0 gray;
 padding:1rem;
@@ -213,15 +261,18 @@ font-weight:bold;
 }
 
 /*footer */
+/*mobile first*/
 #footerinfo{
 display:flex;
+flex-direction:column;
+gap:2rem;
 justify-content:space-between;
-padding:3rem 4rem;
+padding:2rem 1rem;
 }
 #leftfoot{
 display:flex;
 flex-direction:column;
-width:29rem;
+width:100%;
 }
 #rightfoot{
 display:flex;
@@ -275,7 +326,18 @@ margin:9px 0 0 0;
 #partition div{
 height: 1px;
   box-shadow: 0 0 1px 0 gray;
-  width: 77rem;
+  width: 100%;
+}
+
+/*desktop*/
+@media(min-width:768px){
+#footerinfo{
+flex-direction:row;
+}
+#rightfoot{
+flex-direction:row;
+}
+
 }
 .intract{
 cursor:pointer;
