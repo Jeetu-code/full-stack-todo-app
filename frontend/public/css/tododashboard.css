@@ -1,0 +1,110 @@
+*{
+margin:0;
+padding:0;
+}
+
+.container{
+display:flex;
+justify-content:center;
+height:100vh;
+padding:3rem 4rem;
+}
+
+.innercontainer{
+display:flex;
+flex-direction:column;
+width:100%;
+align-items:center;
+min-width:1200px;
+max-width:1200px;
+}
+
+#head{
+width:100%;
+display:flex;
+flex-direction:column;
+box-shadow:0 0 1px 0 gray;
+border-radius:6px;
+}
+
+#createblock{
+display:flex;
+justify-content:space-between;
+padding:2rem 1rem;
+align-items:center;
+}
+#left{
+font-weight:bold;
+font-size:xxx-large;
+}
+#right button{
+background-color: blue;
+  border-radius: 7px;
+  height: 3rem;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+cursor:pointer;
+color:white;
+border:none;
+font-size:inherit;
+}
+#right button:hover{
+box-shadow:0 0 2px 0 #0000e8;
+background-color:#0000e8;
+}
+#createtodo a{
+text-decoration:none;
+
+  color: white;
+}
+#showblock{
+display:flex;
+padding:1rem;
+}
+#alltasks{
+  border-radius: 7px;
+  height: 3rem;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow:0 0 1px 0 gray;
+  margin:0 1rem 0 0;
+}
+#alltasks:hover{
+background-color:blue;
+color:white;
+cursor:pointer;
+}
+#completed{
+  border-radius: 7px;
+  height: 3rem;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow:0 0 1px 0 gray;
+}
+#completed:hover{
+background-color:blue;
+color:white;
+cursor:pointer;
+}
+#todos{
+width:100%;
+}
+#todomessage{
+position: relative;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
+  color: gray;
+}

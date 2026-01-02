@@ -1,0 +1,282 @@
+*{
+margin:0;
+padding:0;
+}
+
+body{
+background-color:#fafafa;
+max-width:1200px;
+min-width:1200px;
+margin:auto;
+}
+
+nav{
+display: flex;
+background-color:white;
+  justify-content: space-between;
+  box-shadow: 0 0px 2px 0px gray;
+  height: 4rem;
+  align-items: center;
+  padding: 0 12px 0 12px;
+}
+
+#leftnav{
+display:flex;
+align-items:center;
+}
+#brandname{
+color: #29f9fc;
+  font-weight: bolder;
+  margin: 0 1rem 0 0;
+  font-size: 27px;
+}
+
+#home{
+margin:0 1rem 0 0;
+}
+#home a{
+text-decoration:none;
+color:black;
+}
+#demo a{
+text-decoration:none;
+color:black;
+}
+#rightnav{
+display:flex;
+align-items:center;
+}
+
+#signin{
+margin:0 1rem 0 0;
+}
+#signin a{
+  text-decoration:none;
+  color:black;
+}
+#signup{
+background-color: #29f9fc;
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height:37px;
+  justify-content: center;
+  border-radius: 6px;
+}
+#signup a{
+  text-decoration:none;
+  color:black;
+}
+#signup:hover{
+background-color: #00fbff;
+}
+
+#mainsection1{
+background-color:white;
+margin:2px 0 0 0;
+}
+
+/* hero section*/
+#hero{
+display:flex;
+justify-content:space-around;
+padding:4rem 5rem;
+}
+
+#lefthero{
+display: flex;
+  flex-direction: column;
+  justify-content: center;}
+
+#bigtexthero{
+font-size: 75px;
+  font-weight: bolder;
+  line-height: 1;
+  width:33rem;
+}
+#smalltexthero{
+width: 26rem;
+margin: 1rem 0 0 0;
+}
+#buttonhero{
+display:flex;
+align-items:center;
+margin:1rem 0 0 0;
+}
+#signuphero{
+background-color: #29f9fc;
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height:37px;
+  justify-content: center;
+  border-radius: 6px;
+	margin:0 1rem 0 0;
+box-shadow:0 0px 2px 1px #29f9fc;
+}
+
+#signuphero:hover{
+background-color: #00fbff;
+}
+#signinhero a{
+  text-decoration:none;
+  color:black;
+}
+#signuphero a{
+  text-decoration:none;
+  color:black;
+}
+#signinhero{
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height:37px;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow:0 0px 1px 0px gray;
+}
+#bgimghero{
+background-image: url("../assets/hero.png");
+  height: 20rem;
+  width: 31rem;
+  background-repeat: no-repeat;
+  border-radius: 17px;
+}
+
+/* section 2 */
+
+#info{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background: transparent;
+  padding:1rem 4rem;
+}
+#infohead{
+margin:5rem 0 0px 0;
+  font-weight: bolder;
+  font-size: xxx-large;
+}
+#infocards{
+display:flex;
+margin:3rem 0 4rem 0;
+}
+.card span{
+margin:0 0 10px 0;
+font-weight:bold;
+}
+.card{
+display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  margin: 1rem 3rem;
+  padding: 1rem;
+text-align: center;
+  box-shadow: 0 0px 2px 0px gray;
+  border-radius:8px;
+  }
+
+/* section 3 */
+#usertest{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+background-color:white;
+padding:3rem 4rem;
+}
+#usertesthead{
+margin:0 0 2rem 0;
+font-weight:bold;
+font-size:xxx-large;
+}
+
+.testcard{
+width:30rem;
+border-radius:1rem;
+box-shadow:0 0 1px 0 gray;
+padding:1rem;
+text-align:center;
+}
+.testcard p{
+font-size:large;
+margin:0 0 1rem 0;
+}
+.testcard span{
+display:flex;
+flex-direction:column;
+}
+#testusername{
+font-weight:bold;
+}
+
+/*footer */
+#footerinfo{
+display:flex;
+justify-content:space-between;
+padding:3rem 4rem;
+}
+#leftfoot{
+display:flex;
+flex-direction:column;
+width:29rem;
+}
+#rightfoot{
+display:flex;
+}
+#rightfoot li{
+list-style:none;
+}
+#appname{
+color: #29f9fc;
+  font-weight: bolder;
+  margin: 0 1rem 0 0;
+  font-size: 27px;
+
+}
+#socialplatforms{
+display:flex;
+margin:1rem 0 0 0;
+}
+.cardimg img{
+width:32px;
+height:35px;
+}
+.simg img{
+width:20px;
+height:18px;
+margin:0 1rem 0 0;
+}
+#rightsreserved{
+display:flex;
+height:3rem;
+justify-content:center;
+align-items:center;
+}
+
+#partition{
+display:flex;
+justify-content:center;
+}
+#rightfoot div{
+margin:0 7rem 0 0;
+}
+#rightfoot div span{
+font-weight:bold;
+}
+#rightfoot div ul{
+margin:8px 0 0 0;
+}
+#rightfoot div ul li{
+margin:9px 0 0 0;
+}
+#partition div{
+height: 1px;
+  box-shadow: 0 0 1px 0 gray;
+  width: 77rem;
+}
+.intract{
+cursor:pointer;
+}
