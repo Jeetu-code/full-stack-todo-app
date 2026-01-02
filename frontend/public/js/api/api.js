@@ -1,4 +1,4 @@
-const base_url = "http://localhost:3000";
+const base_url = "https://full-stack-todo-app-backend-edgy.onrender.com";
 
 export async function apiRequest(endpoint,options={}){
 const token = localStorage.getItem("Token");
