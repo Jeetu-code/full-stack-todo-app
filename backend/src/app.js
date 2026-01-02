@@ -5,7 +5,7 @@ const route=require("./routes/user.route.js");
 const globalerr=require("./middlewares/globalerr.js");
 app.use(express.json());
 app.use(cors({
-	origin:"http://localhost:5500",
+	origin:"https://full-stack-todo-app-neon.vercel.app/",
 	methods:["POST","GET","PUT","DELETE"],
 	allowedHeaders:["Content-Type","Authorization"],
 	Credentials:true
