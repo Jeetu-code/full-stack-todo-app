@@ -1,22 +1,22 @@
 *{
 margin:0;
 padding:0;
+box-sizing:border-box;
 }
-
+/*mobile first*/
 .container{
 display:flex;
 justify-content:center;
-height:100vh;
-padding:3rem 4rem;
+min-height:100vh;
+padding: 1rem;
 }
 
 .innercontainer{
 display:flex;
 flex-direction:column;
 width:100%;
-align-items:center;
-min-width:1000px;
 max-width:1200px;
+align-items:center;
 }
 
 #head{
@@ -27,15 +27,17 @@ box-shadow:0 0 1px 0 gray;
 border-radius:6px;
 }
 
+/* mobile first*/
 #createblock{
 display:flex;
-justify-content:space-between;
-padding:2rem 1rem;
-align-items:center;
+flex-direction:column;
+gap:1rem;
+padding: 1rem;
+align-items:flex-start;
 }
 #left{
 font-weight:bold;
-font-size:xxx-large;
+font-size:1.8rem;
 }
 #right button{
 background-color: blue;
@@ -62,13 +64,18 @@ text-decoration:none;
 }
 #showblock{
 display:flex;
+gap:0.5rem;
 padding:1rem;
+flex-wrap:wrap;
 }
+
 #alltasks{
   border-radius: 7px;
   height: 3rem;
   width: 9rem;
   display: flex;
+  flex:1;
+  min-width:8rem;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -85,11 +92,16 @@ cursor:pointer;
   height: 3rem;
   width: 9rem;
   display: flex;
+  flex:1;
+  min-width:8rem;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   box-shadow:0 0 1px 0 gray;
 }
+
+
+
 #completed:hover{
 background-color:blue;
 color:white;
@@ -100,11 +112,31 @@ width:100%;
 }
 #todomessage{
 position: relative;
-  height: 10rem;
+  height: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: xx-large;
+  font-size: 1.2rem;
+  padding:1rem;
   font-weight: bold;
   color: gray;
+}
+
+/*desktop */
+
+@media(min-width:768ox){
+.container{
+padding:3rem 4rem;
+}
+#createblock{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+}
+#left{
+font-size:3rem;
+}
+#showblock{
+flex-wrap:nowrap;
+}
 }
