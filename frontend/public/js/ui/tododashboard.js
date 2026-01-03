@@ -2,7 +2,17 @@ import {AddTodoModel} from "../../components/addtodo.js";
 import {TodoList} from "../../components/todolist.js";
 import {addTodo}  from "../services/todo.js";
 import {getTodo}  from "../services/todo.js";
+
+
+
 export async function todoDashboard(){
+const token = localStorage.getItem("Token");
+if(!token){
+alert("session expired. Please signin again.");
+window.location.href="../../pages/signin.html";
+return;
+}
+helper
 //helper function 
 function showMessage(todoRoot,message){
 todoRoot.innerHTML=`
@@ -27,6 +37,10 @@ return;
 todoRoot.innerHTML="";
 try{
 const todos = await getTodo();
+if(!Array.isArray(todos)){
+alert("Please Signin again");
+return;
+}
 if(todos.length === 0){
 showMessage(todoRoot,"No Todo Created Yet");
 return;
@@ -100,6 +114,7 @@ const todoRoot = document.getElementById("todos");
 const model = AddTodoModel(async(title)=>{
 try{
 const todo=await addTodo(title);
+if(!todo){return;}
 const todomsg=document.getElementById("todomessage");
 if(todomsg)todomsg.remove();
 todoRoot.appendChild(TodoList(todo));

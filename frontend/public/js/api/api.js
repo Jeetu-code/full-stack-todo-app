@@ -14,10 +14,11 @@ const response = await fetch(base_url+endpoint,{
 	...options,
 	headers,
 });
-if(!response){
+if(!response.ok){
 const errorData=response.json();
-throw new Error(errData);
+throw new Error(errorData.message );
 }else{
+
 return response.json();
 }
 }
