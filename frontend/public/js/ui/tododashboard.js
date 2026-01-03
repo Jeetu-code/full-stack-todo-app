@@ -12,7 +12,6 @@ alert("session expired. Please signin again.");
 window.location.href="../../pages/signin.html";
 return;
 }
-helper
 //helper function 
 function showMessage(todoRoot,message){
 todoRoot.innerHTML=`
