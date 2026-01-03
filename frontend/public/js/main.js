@@ -8,7 +8,7 @@ Signup();
 if(document.getElementById("signinbtn")){
 Signin();
 }
-if(document.getElementById("todos")){
+if(document.getElementById("dashboard-page")){
 todoDashboard();
 }
 });
